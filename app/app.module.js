@@ -1,17 +1,24 @@
 ;(function () {
     'use strict';
 
-    angular.module('myApp', [
-        'ui.router'
+    angular.module('app', [
+        'app.config'
     ])
 
 
+        .run(run);
 
-        // .config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
-        //     $locationProvider.hashPrefix('!');
-        //
-        //     // $routeProvider.otherwise({redirectTo: '/view1'});
-        // }]);
+
+    function run() {
+        console.log('app is ready');
+    }
+
+
+    // .config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
+    //     $locationProvider.hashPrefix('!');
+    //
+    //     // $routeProvider.otherwise({redirectTo: '/view1'});
+    // }]);
 })();
 
 
