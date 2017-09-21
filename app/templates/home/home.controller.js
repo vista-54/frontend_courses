@@ -9,6 +9,6 @@
     HomeController.$inject = [];
 
     function HomeController() {
-
+        console.log('HomeController is ready');
     }
 })();

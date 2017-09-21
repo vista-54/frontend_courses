@@ -13,6 +13,15 @@
         console.log('config is ready');
 
         $urlRouterProvider.otherwise('/home');
+
+        $stateProvider
+            .state('home', {
+                url: '/home',
+                templateUrl: 'templates/home/home.html',
+                controller: 'HomeController',
+                controllerAs: 'vm'
+            })
+
     }
 
 })();
