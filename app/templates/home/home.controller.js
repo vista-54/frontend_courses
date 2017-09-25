@@ -6,12 +6,13 @@
         .controller('HomeController', HomeController);
 
 
-    HomeController.$inject = [];
+    HomeController.$inject = ['user', 'userStorage'];
 
-    function HomeController() {
+    function HomeController(user, userStorage) {
         const vm = this;
         vm.test = " this is a test value";
         vm.testfnc = testfnc;
+        vm.name = user.getName();
 
         vm.clients = [
             {
@@ -30,6 +31,8 @@
                 email: "darina@gmail.com"
             }
         ];
+        userStorage.users = vm.clients;
+
 
         function testfnc() {
             return "Hello world";
@@ -37,4 +40,6 @@
 
         console.log('HomeController is ready');
     }
+
+
 })();

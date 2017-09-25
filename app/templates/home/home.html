@@ -1,6 +1,12 @@
 Clients list
+<p>
+    {{vm.name}}
+</p>
 <ul>
     <li ng-repeat="item in vm.clients">
-        <client clientScope="{{item}}"></client>
+        <p>{{item.username}} {{item.age}} {{item.email}}</p>
+
+        <p client-directive="" data-client-scope="item"></p>
+
     </li>
 </ul>
